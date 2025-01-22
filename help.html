@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Support</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-white font-bold text-xl">Event Management System</a>
+      <a href="index.html" class="text-white hover:text-gray-300 font-semibold">Home</a>
+    </div>
+  </nav>
+
+  <!-- Support Form Section -->
+  <div class="container mx-auto mt-10 bg-white shadow-lg rounded-lg p-8">
+    <h2 class="text-3xl font-semibold text-center mb-6">Contact Support</h2>
+    <form id="supportForm" class="space-y-4">
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-gray-700 font-bold mb-2">Your Name:</label>
+        <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Enter your name" required>
+      </div>
+      
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-gray-700 font-bold mb-2">Your Email:</label>
+        <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Enter your email" required>
+      </div>
+      
+      <!-- Query Box -->
+      <div>
+        <label for="query" class="block text-gray-700 font-bold mb-2">Your Query:</label>
+        <textarea id="query" name="query" rows="6" class="w-full border border-gray-300 rounded-lg p-2" placeholder="Describe your query or issue" required></textarea>
+      </div>
+      
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="px-6 py-2 bg-blue-600 text-white font-bold rounded hover:bg-blue-500 transition">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal (Popup) Section -->
+  <!-- <div id="popupModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg p-8 max-w-sm w-full">
+      <h3 class="text-xl font-semibold mb-4">Query Submitted Successfully</h3>
+      <p class="text-gray-700 mb-4">Thank you for reaching out! Your query has been sent, and you will be notified via verified email shortly.</p>
+      <div class="text-center">
+        <button onclick="closePopup()" class="px-6 py-2 bg-blue-600 text-white font-bold rounded hover:bg-blue-500 transition">Close</button>
+      </div>
+    </div>
+  </div> -->
+
+  <script>
+    // Function to show the popup modal
+    //function showPopup() {
+    //  document.getElementById('popupModal').classList.remove('hidden');
+   // }
+
+    // Function to close the popup modal
+    // function closePopup() {
+    //   document.getElementById('popupModal').classList.add('hidden');
+    // }
+
+    // Handle form submission
+    document.getElementById('supportForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from actually submitting
+
+      // Simulate form submission success (this can be replaced with actual server-side logic)
+      //showPopup();
+      alert('Query successfully submitted');
+      // Optionally reset the form after submission
+      document.getElementById('supportForm').reset();
+    });
+  </script>
+
+</body> 
+</html>      

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Selected Package</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('SHOWLOCATION_BG.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Your Selected Package</h2>
+    <!-- <p><strong>Location:</strong> <span id="location"></span></p>
+    <p><strong>Budget:</strong> <span id="budget"></span> INR</p> -->
+    <a href="payoption.html" class="btn">Proceed to Payment</a>
+  </div>
+
+  <script>
+    // Retrieve the data from localStorage
+    const location = localStorage.getItem('location');
+    const budget = localStorage.getItem('budget');
+
+    // Display the retrieved data
+    document.getElementById('location').textContent = location || 'Not selected';
+    document.getElementById('budget').textContent = budget || 'Not provided';
+  </script>
+</body>
+</html>
